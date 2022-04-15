@@ -22,5 +22,23 @@ class StudentdataApplicationTests {
 		repo.save(student);
 
 }
+	@Test
+	void readStudent() {
+		Student student=repo.findById(2L).get();
+		System.out.println(student);
+		
+	}
+	
+	@Test
+	void updateStudent() {
+		Student student=repo.findById(2L).get();
+		student.setFees(6000d);
+		repo.save(student);
+	}
+	
+	@Test
+	void deleteStudent() {
+		repo.deleteById(1L);
+	}
 
 }
