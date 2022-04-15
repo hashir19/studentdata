@@ -24,14 +24,14 @@ class StudentdataApplicationTests {
 }
 	@Test
 	void readStudent() {
-		Student student=repo.findById(2L).get();
+		Student student=repo.findById(1L).get();
 		System.out.println(student);
 		
 	}
 	
 	@Test
 	void updateStudent() {
-		Student student=repo.findById(2L).get();
+		Student student=repo.findById(1L).get();
 		student.setFees(6000d);
 		repo.save(student);
 	}
